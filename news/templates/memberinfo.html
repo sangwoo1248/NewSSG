@@ -1,0 +1,68 @@
+{% load static %}
+{% block content %}
+<div class="wrapper" style="text-align: center;">
+    <h1>회원가입</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ error }} {{ save }}
+        <br>
+        <br>
+        아이디: <br>
+        <input name="id" type="text" style="text-align:center; width:200px; height:30px">
+        <br>
+        비밀번호: <br>
+        <input name="password" type="password" style="text-align:center; width:200px; height:30px">
+        <br>
+        비밀번호 확인: <br>
+        <input name="password1" type="password" style="text-align:center; width:200px; height:30px">
+        <br>
+        이름: <br>
+        <input name="name" type="text"style="text-align:center; width:200px; height:30px">
+        <br>
+        생일: <br>
+        <input name="birth" type="text" placeholder="예시) 2022-01-01" style="text-align:center; width:200px; height:30px">
+        <br>
+        성별: <br>
+        <input name="sex" type="text" style="text-align:center; width:200px; height:30px">
+        <br>
+        이메일: <br>
+        <input name="email" type="text" placeholder="예시) world@worldvision.com" style="text-align:center; width:200px; height:30px">
+        <br>
+        휴대폰번호: <br>
+        <input name="phone" type="text" placeholder="예시) 010-1234-5678" style="text-align:center; width:200px; height:30px">
+        <br><br>
+        <input type="submit" class="btn btn-primary" value="Sign Up" style="text-align:center; width:200px; height:30px">
+        <br><br>
+        <a class="nav-link" href="{% url 'index' %}">홈으로 이동</a>
+    </form>
+</div>
+<script>
+    // var request = new XMLHttpRequest();
+    var start = Date.now();
+    var point = null;
+    window.addEventListener('scroll', function () {
+      let delta = Date.now() - start;
+      point = window.scrollY;
+      if (delta >= 3000) { //3초
+        $.ajax({
+          url: '/news/',
+          type: 'POST',
+          dataType: 'JSON',
+          data: {
+            'deltaTime': delta,
+            csrfmiddlewaretoken: '{{ csrf_token }}'
+          },
+          headers: { 'X-CSRFToken': '{{ csrf_token }}' },
+          succes: function () {
+            alert("성공")
+          },
+          // error: function(xhr, textStatus, thrownError){
+          //   alert("Could not send URL to Django. Error: " + xhr.status + ": " + xhr.responseText);
+          // }
+
+        })
+      }
+      start = Date.now()
+    })
+  </script>
+{% endblock %}

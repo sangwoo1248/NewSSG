@@ -1,0 +1,86 @@
+<!-- 2022-02-07 park-jong-won -->
+{% load static %}
+{% block content %}
+<header id="header">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="d-flex justify-content-between align-items-center navbar-top">
+        <ul class="navbar-left">
+          <li>
+            <div id="divClock" class="clock"></div>
+          </li>
+        </ul>
+        <div>
+          <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'assets/images/logo.svg' %}"
+            alt="" /></a>
+        </div>
+        <div class="d-flex">
+          <ul class="navbar-right">
+          </ul>
+          <ul class="social-media">
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-bottom-menu">
+        <button class="navbar-toggler" type="button" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse justify-content-center collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav d-lg-flex justify-content-between align-items-center">
+            <li>
+              <button class="navbar-close">
+                <i class="mdi mdi-close"></i>
+              </button>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link active" href="{% url 'index' %}">홈</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'author' %}">언론사별</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'politics' %}">정치</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'economy' %}">경제</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'society' %}">사회</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'life' %}">생활/문화</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'IT' %}">IT/과학</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'world' %}">세계</a>
+            </li>
+            <li>
+              {% include 'login.html' %}
+            </li>
+            <li class="nav-item">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+{% endblock %}

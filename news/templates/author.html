@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zxx">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>World Vision</title>
+    <!-- plugin css for this page -->
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendors/mdi/css/materialdesignicons.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'assets/vendors/aos/dist/aos.css/aos.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendors/owl.carousel/dist/assets/owl.carousel.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendors/owl.carousel/dist/assets/owl.theme.default.min.css' %}"
+    />
+    <!-- End plugin css for this page -->
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.png' %}" />
+    <!-- inject:css -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <!-- endinject -->
+    <script type="text/javascript">
+      function showClock(){
+        var currentDate = new Date();
+        var divClock = document.getElementById('divClock');
+        var msg = "";
+        if(currentDate.getHours()>12){
+          msg += "오후 ";
+          msg += currentDate.getHours()-12+"시 ";
+       }
+       else {
+         msg += "오전 ";
+         msg += currentDate.getHours()+"시 ";
+       }
+
+        msg += currentDate.getMinutes()+"분 ";
+
+        divClock.innerText = msg;
+
+        if (currentDate.getMinutes()>58) {
+          divClock.style.color="red";
+        }
+        setTimeout(showClock,1000);
+      }
+    </script>
+  </head>
+  <body onload="showClock()">
+    <div class="container-scroller">
+      {% include '_navbar.html' %}
+      <div class="container">
+        <div class="row">
+
+          <!-- 왼쪽 언론사 베너 설정 -->
+          <div class="col-md-2  mb-5 mb-sm-2">
+            <div class="author-box border p-4">
+              <ul class="press_ul">
+                {% for pl in press_list %}
+                  <li class="press_li">
+                    <a href="{% url 'author' pl.p_id %}">
+                      {{pl.p_name}}
+                    </a>
+                  </li>
+                  <br>
+                {% endfor %}
+              </ul>
+
+              <!-- collapse 설정 -->
+              {% comment %} <div class="panel-group">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" href="#collapse1">언론사</a>
+                    </h4>
+                  </div>
+                  <div id="collapse1" class="panel-collapse collapse">
+                    <ul class="list-group">
+                      {% for pl in press_list %}
+                        <li class="list-group-item">
+                          <a href="{% url 'author' pl.p_id %}">
+                            {{pl.p_name}}
+                          </a>
+                        </li>
+                        <br>
+                      {% endfor %}
+                    </ul>
+                    <div class="panel-footer">Footer</div>
+                  </div>
+                </div>
+              </div> {% endcomment %}
+
+            </div>
+          </div>
+
+          <!-- 언론사 내용 설정 -->
+          <div class="col-md-10  mb-5 mb-sm-2">
+            <div class="row">
+              <div class="col-sm-12  mb-5 mb-sm-2">
+                {% for news in sel_press_list%}
+                  <div class="row mb-5">
+                    <div class="col-lg-6">
+                      <a href="{% url 'news_post' news.n_id %}" style="color:black;">
+                        <img src="{{ news.nd_img }}" class="img-fluid" alt="world-news" />
+                      </a>
+                    </div>
+                    <div class="col-lg-6">
+                      <h1 class="font-weight-600 mt-5">
+                        <a href="{% url 'news_post' news.n_id %}" style="color:black;">{{ news.n_title }}</a>
+                      </h1>
+                      <p>
+                        <a>
+                          <strong>본문 요약 :</strong>
+                        </a>
+                        {{ news.nso_content }}
+                      </p>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- container-scroller ends -->
+    <!-- partial:../partials/_footer.html -->
+    {% include '_footer.html' %}
+    <div style="position:fixed;bottom:5px;right:5px;">
+      <a href="#header"><img src="{% static 'assets/images/mouse.png' %}" title="맨 위로"></a>
+    </div>
+    <!-- partial -->
+    <!-- inject:js -->
+    <script src="{% static 'assets/vendors/js/vendor.bundle.base.js' %}"></script>
+    <!-- endinject -->
+    <!-- plugin js for this page -->
+    <script src="{% static 'assets/vendors/aos/dist/aos.js/aos.js' %}"></script>
+    <script src="{% static 'assets/vendors/owl.carousel/dist/owl.carousel.min.js' %}"></script>
+    <!-- End plugin js for this page -->
+    <!-- Custom js for this page-->
+    <script src="{% static 'assets/js/demo.js' %}"></script>
+    <!-- End custom js for this page-->
+  </body>
+</html>

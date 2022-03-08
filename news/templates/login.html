@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+{% if session_user_check == False %}
+<form action="." method="POST">
+    {% csrf_token %}
+    {{ error }}
+    <input name="id" type="text" style="text-align:center; width:100px; height:20px">
+    <input name="password" type="password" style="text-align:center; width:100px; height:20px">
+    <input type="submit" value="로그인" onclick="location.href='.'">
+</form>
+<div style="margin-left:40px;">{{ login_massage }}</div>
+<li>
+    <a class="nav-link" href="{% url 'memberinfo' %}">회원가입</a>
+</li>
+{% else %}
+<form action="." method="POST">
+    {% csrf_token %}
+    <button class="'btn btn-primary btn-block" onclick="location.href='..'">로그아웃</button>
+</form>
+<li>
+    <div style="margin-left:40px;">{{ login_massage }}</div>
+</li>
+<li>
+    <a class="nav-link" href="{% url 'mypage' %}">마이페이지</a>
+</li>
+{% endif %}
+    
