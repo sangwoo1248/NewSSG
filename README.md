@@ -20,12 +20,12 @@
 <br>
 <img src ="https://user-images.githubusercontent.com/53454667/158966742-b7f9c980-1e17-4ef2-bb92-4dd5b805d611.PNG">
 <br>
-# 벤치마킹<br>
-- 네이버 요약봇<br>
-- AI허브 요약문<br>
-- 네이트 요약봇<br>
+<h1>벤치마킹<br>
+<h3>네이버 요약봇<br>
+<h3>AI허브 요약문<br>
+<h3>네이트 요약봇<br>
 <br>
-# 참고 자료<br>
+<h1>참고 자료<br>
 <a href = "https://pseudo-lab.github.io/Tutorial-Book/chapters/NLP/Ch1-Introduction.html">
 PseudoLab, 자연어 처리 모델 소개 (Introduction to NLP Model)
 </a>
