@@ -26,19 +26,17 @@
 <h3>네이트 요약봇<br>
 <br>
 <h1>참고 자료<br>
-<a href = "https://pseudo-lab.github.io/Tutorial-Book/chapters/NLP/Ch1-Introduction.html">
+<h3><a href = "https://pseudo-lab.github.io/Tutorial-Book/chapters/NLP/Ch1-Introduction.html">
 PseudoLab, 자연어 처리 모델 소개 (Introduction to NLP Model)
-</a>
-<br>
-<a href = "https://www.koreascience.or.kr/article/CFKO201408355727285.pdf">박은정, 조성준, “KoNLPy: 쉽고 간결한 한국어 정보처리 파이썬 패키지”, 제 26회 한글 및 한국어 정보처리 학술대회 논문집, 2014.
-</a>
-<br>
-<a href = "https://konlpy.org/ko/latest">KoNLPy:파이썬 한국어 NLP</a><br>
-<a href = "https://beta.openai.com/docs/engines/gpt-3">OpenAI, Documentation – Engines</a><br>
-<a href = "https://arxiv.org/pdf/1810.04805.pdf&usg=ALkJrhhzxlCL6yTht2BRmH9atgvKFxHsxQ"><br>
+</a><br>
+<h3><a href = "https://www.koreascience.or.kr/article/CFKO201408355727285.pdf">박은정, 조성준, “KoNLPy: 쉽고 간결한 한국어 정보처리 파이썬 패키지”, 제 26회 한글 및 한국어 정보처리 학술대회 논문집, 2014.
+</a><br>
+<h3><a href = "https://konlpy.org/ko/latest">KoNLPy:파이썬 한국어 NLP</a><br>
+<h3><a href = "https://beta.openai.com/docs/engines/gpt-3">OpenAI, Documentation – Engines</a><br>
+<h3><a href = "https://arxiv.org/pdf/1810.04805.pdf&usg=ALkJrhhzxlCL6yTht2BRmH9atgvKFxHsxQ">
 Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova, “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding”
 </a><br>
-<a href = "https://wikidocs.net/book/2155">WikiDocs, 딥 러닝을 이용한 자연어 처리 입문</a><br>
-<a href = "https://ettrends.etri.re.kr/ettrends/183/0905183002/0905183002.html">
+<h3><a href = "https://wikidocs.net/book/2155">WikiDocs, 딥 러닝을 이용한 자연어 처리 입문</a><br>
+<h3><a href = "https://ettrends.etri.re.kr/ettrends/183/0905183002/0905183002.html">
 ETRI(전자통신동향분석), 임준호, 김현기, 김영길, 딥러닝 사전학습 언어모델 기술 동향
 </a>
