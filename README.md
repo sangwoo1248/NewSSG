@@ -1,7 +1,8 @@
 # NewSSG
 # 실행 화면(동영상)
 제목과 요약한 기사를 보여주고 기사 제목을 누르면 제목/요약 기사/원문/ 원본 링크가 나온다
-https://user-images.githubusercontent.com/53454667/158976667-d9f50152-93a7-4533-81a5-4c2a83386e78.mp4
+<a href = "https://user-images.githubusercontent.com/53454667/158976667-d9f50152-93a7-4533-81a5-4c2a83386e78.mp4">
+</a>
 많이 본 기사 통계
 https://user-images.githubusercontent.com/53454667/158976680-8ee2868c-213c-43e9-a57d-45e0831b90ba.mp4
 # KoBART를 이용한 뉴스 요약
